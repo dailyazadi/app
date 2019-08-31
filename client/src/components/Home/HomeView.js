@@ -25,7 +25,12 @@ class HomeView extends Component {
             <LeadStory post={posts[0]} />
             <MultimediaSection />
             {SECTIONS.map((section, index) => (
-              <Section sectionTitle={section} post={posts[0]} key={index} />
+              <Section
+                sectionTitle={section}
+                post={posts[0]}
+                posts={posts}
+                key={index}
+              />
             ))}
           </div>
           <div className="col-md-4 border-right-1">

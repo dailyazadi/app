@@ -16,7 +16,7 @@ class MultimediaSection extends Component {
             <div className="dropdown-divider border-dark mb-0 pb-0 pt-5"></div>
           </div>
         </div>
-        <FourStoryGrid />
+        {/* <FourStoryGrid /> */}
       </div>
     );
   }

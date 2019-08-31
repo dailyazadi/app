@@ -6,6 +6,7 @@ import './App.css';
 import Header from './components/Header';
 import { MENUS_URL, API_URL, MENUS, POSTS } from './constants';
 import HomeView from './components/Home/HomeView';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -45,9 +46,12 @@ class App extends React.Component {
     const { menus, posts, currentDate } = this.state;
     console.log(currentDate);
     return (
-      <div className="pl-4 pr-4 bg-white">
-        <Header menus={menus} currentDate={currentDate} />
-        <HomeView posts={posts} />
+      <div className="bg-white">
+        <div className="pl-4 pr-4">
+          <Header menus={menus} currentDate={currentDate} />
+          <HomeView posts={posts} />
+        </div>
+        <Footer />
       </div>
     );
   }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Col2Story from '../Col2Story';
 import HeadlinesList from '../HeadlinesList';
+import FourStoryGrid from './FourStoryGrid';
 
 class Section extends Component {
   render() {
-    const { sectionTitle, post } = this.props;
+    const { sectionTitle, post, posts } = this.props;
     return (
       <div className="">
         <div className="row p-0 m-0">
@@ -17,6 +18,7 @@ class Section extends Component {
             <HeadlinesList />
           </div>
         </div>
+        <div>{posts && <FourStoryGrid posts={posts} />}</div>
       </div>
     );
   }
