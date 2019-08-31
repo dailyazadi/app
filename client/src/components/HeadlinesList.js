@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class HeadlinesList extends Component {
   render() {
     return (
       <ul className="list-group d-none d-md-block">
         <li className="list-group-item border-0 p-0 m-0">
-          <a className="h4 btn p-0 m-0 pb-1" href="#">
+          <Link className="h4 btn p-0 m-0 pb-1" to={`post/1`}>
             Cras justo odio
-          </a>
+          </Link>
         </li>
         <li className="list-group-item border-0 p-0 m-0">
-          <a className="h4 btn p-0 m-0 pb-1" href="#">
+          <Link className="h4 btn p-0 m-0 pb-1" to={`post/1`}>
             Dapibus ac facilisis in
-          </a>
+          </Link>
         </li>
         <li className="list-group-item border-0 p-0 m-0">
-          <a className="h4 btn p-0 m-0 pb-1" href="#">
+          <Link className="h4 btn p-0 m-0 pb-1" to={`post/1`}>
             Morbi leo risus
-          </a>
+          </Link>
         </li>
         <li className="list-group-item border-0 p-0 m-0">
-          <a className="h4 btn p-0 m-0 pb-1" href="#">
+          <Link className="h4 btn p-0 m-0 pb-1" to={`post/1`}>
             Porta ac consectetur ac
-          </a>
+          </Link>
         </li>
         <li className="list-group-item border-0 p-0 m-0">
-          <a className="h4 btn p-0 m-0 pb-1" href="#">
+          <Link className="h4 btn p-0 m-0 pb-1" to={`post/1`}>
             Vestibulum at eros
-          </a>
+          </Link>
         </li>
       </ul>
     );

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 class StoryWithAvatar extends Component {
   render() {
-    const { post } = this.props;
+    const { post, id } = this.props;
     return (
       <div>
         <div className="row">
@@ -18,7 +18,9 @@ class StoryWithAvatar extends Component {
                 />
               </div>
             </div>
-            <h5>{post.title.rendered}</h5>
+            <Link className="" to={`post/${id}`}>
+              <h6>{post.title.rendered}</h6>
+            </Link>
             <p>{post.excerpt.rendered}</p>
             <p className="small text-secondary">udpate</p>
           </div>

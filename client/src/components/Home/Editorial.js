@@ -4,11 +4,11 @@ import StoryWithAvatar from './StoryWithAvatar';
 
 class Editorial extends Component {
   render() {
-    const { post } = this.props;
+    const { post, id } = this.props;
     return (
       <div>
         <h4>اِداریہ</h4>
-        {post && <StoryWithAvatar post={post} />}
+        {post && <StoryWithAvatar post={post} id={id} />}
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Story extends Component {
   render() {
-    const { post } = this.props;
+    const { post, id } = this.props;
     const { title, excerpt, images, modified } = post;
 
     const date = new Date(modified).toLocaleTimeString();
@@ -11,7 +12,9 @@ class Story extends Component {
     return (
       <div className="row">
         <div className="col-sm-12 col-md-4">
-          <h4>{title.rendered}</h4>
+          <Link to={`post/${id}`}>
+            <h4>{title.rendered}</h4>
+          </Link>
           <p>{excerpt.rendered}</p>
           <p className="text-warning small">وقتِ اشاعت: {date}</p>
         </div>

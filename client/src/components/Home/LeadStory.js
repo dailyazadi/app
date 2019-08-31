@@ -7,7 +7,7 @@ class LeadStory extends Component {
 
     return (
       <div className="row">
-        <div className="col">{post && <Story post={post} />}</div>
+        <div className="col">{post && <Story post={post} id={1} />}</div>
       </div>
     );
   }

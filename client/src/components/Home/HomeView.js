@@ -29,13 +29,14 @@ class HomeView extends Component {
                 sectionTitle={section}
                 post={posts[0]}
                 posts={posts}
+                id={index + 1}
                 key={index}
               />
             ))}
           </div>
           <div className="col-md-4 border-right-1">
             <SidebarContainer>
-              <Editorial post={posts[0]} />
+              <Editorial post={posts[0]} id={1} />
               <SocialMediaFollow />
             </SidebarContainer>
           </div>

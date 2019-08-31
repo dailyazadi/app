@@ -6,6 +6,13 @@ export const MENUS_URL =
 
 export const POSTS_URL = 'posts?category=3&per_page=1';
 
+export const ROUTES = {
+  home: '/',
+  post: '/post/:id',
+  epaper: '/epaper',
+  multimedia: '/multimedia'
+};
+
 export const SECTIONS = [
   'اہم خبریں',
   'بلوچستان',

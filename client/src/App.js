@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 import * as moment from 'moment';
 import 'moment/locale/ur';
@@ -7,6 +8,10 @@ import Header from './components/Header';
 import { MENUS_URL, API_URL, MENUS, POSTS } from './constants';
 import HomeView from './components/Home/HomeView';
 import Footer from './components/Footer';
+import { ROUTES } from './constants';
+import Epaper from './components/Epaper';
+import Multimedia from './components/Multimedia';
+import SingleStory from './components/Home/SingleStory';
 
 class App extends React.Component {
   constructor(props) {
@@ -46,12 +51,23 @@ class App extends React.Component {
     const { menus, posts, currentDate } = this.state;
     console.log(currentDate);
     return (
-      <div className="bg-white">
-        <div className="pl-4 pr-4">
-          <Header menus={menus} currentDate={currentDate} />
-          <HomeView posts={posts} />
-        </div>
-        <Footer />
+      <div>
+        <Header menus={menus} currentDate={currentDate} />
+        <Router>
+          <div className="bg-white">
+            <div className="pl-4 pr-4">
+              <Route
+                path={ROUTES.home}
+                exact
+                render={props => <HomeView posts={posts} />}
+              />
+              <Route path={ROUTES.post} component={SingleStory} />
+              <Route path={ROUTES.epaper} component={Epaper} />
+              <Route path={ROUTES.multimedia} component={Multimedia} />
+            </div>
+            <Footer />
+          </div>
+        </Router>
       </div>
     );
   }
