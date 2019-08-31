@@ -13,7 +13,7 @@ class SmallStory extends Component {
         <div className="col-md-8">
           <h6>{title.rendered}</h6>
         </div>
-        <div class="col-md-4">
+        <div className="col-md-4">
           <img className="img-fluid" src={images.medium} />
         </div>
       </div>

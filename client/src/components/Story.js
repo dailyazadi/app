@@ -13,7 +13,7 @@ class Story extends Component {
         <div className="col-md-4">
           <h4>{title.rendered}</h4>
           <p>{excerpt.rendered}</p>
-          <p className="text-warning">وقتِ اشاعت: {date}</p>
+          <p className="text-warning small">وقتِ اشاعت: {date}</p>
         </div>
         <div className="col-md-7 border-right-1">
           <img className="img-fluid" src={images.full} />

@@ -21,3 +21,6 @@ body {
 .border-right-1 {
   border-right: 1px solid rgb(237, 237, 237);
 }
+.flex-flow-nwrp {
+  flex-flow: row nowrap;
+}

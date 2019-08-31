@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import * as moment from 'moment';
+import 'moment/locale/ur';
 import './App.css';
 import Header from './components/Header';
 import { MENUS_URL, API_URL } from './constants';
@@ -10,7 +12,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       menus: [],
-      posts: []
+      posts: [],
+      currentDate: moment().format('LL')
     };
   }
 
@@ -39,10 +42,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { menus, posts } = this.state;
+    const { menus, posts, currentDate } = this.state;
+    console.log(currentDate);
     return (
       <div className="pl-4 pr-4 bg-white">
-        <Header menus={menus} />
+        <Header menus={menus} currentDate={currentDate} />
         <HomeView posts={posts} />
       </div>
     );

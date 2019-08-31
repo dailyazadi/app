@@ -10,8 +10,8 @@ class TopFour extends Component {
         <div className="row pb-3">
           {[1, 2, 3, 4].map((story, index) => {
             return (
-              <div className="col-md-3 border-left">
-                {post && <SmallStory post={post} key={index} />}
+              <div className="col-md-3 border-left" key={index}>
+                {post && <SmallStory post={post} />}
               </div>
             );
           })}

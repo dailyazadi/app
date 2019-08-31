@@ -10,12 +10,12 @@ class Col2Story extends Component {
 
     return (
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-6">
           <h5>{title.rendered}</h5>
           <p>{excerpt.rendered}</p>
-          <p className="text-warning">وقتِ اشاعت: {date}</p>
+          <p className="text-warning small">وقتِ اشاعت: {date}</p>
         </div>
-        <div className="col-md-5 border-right-1">
+        <div className="col-md-6 border-right-1">
           <img className="img-fluid" src={images.full} />
         </div>
       </div>
