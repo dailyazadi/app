@@ -8,7 +8,7 @@ class Section extends Component {
     return (
       <div className="">
         <div className="row p-0 m-0">
-          <h2 className="p-0 m-0">{sectionTitle}</h2>
+          <h3 className="p-0 m-0">{sectionTitle}</h3>
         </div>
         <div className="dropdown-divider border-dark pb-3 pt-0 mt-0"></div>
         <div className="row">

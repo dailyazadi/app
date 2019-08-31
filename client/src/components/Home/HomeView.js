@@ -4,8 +4,10 @@ import Section from './Section';
 import TopFour from './TopFour';
 import NewsFlash from './NewsFlash';
 import { SECTIONS } from '../../constants';
-import Sidebar from './Sidebar';
+import SidebarContainer from './SidebarContainer';
 import Editorial from './Editorial';
+import SocialMediaFollow from './SocialMediaFollow';
+import MultimediaSection from './MultimediaSection';
 
 class HomeView extends Component {
   render() {
@@ -21,14 +23,16 @@ class HomeView extends Component {
           <div className="col-md-8">
             <div className="dropdown-divider border-dark mb-0 pb-3"></div>
             <LeadStory post={posts[0]} />
+            <MultimediaSection />
             {SECTIONS.map((section, index) => (
               <Section sectionTitle={section} post={posts[0]} key={index} />
             ))}
           </div>
           <div className="col-md-4 border-right-1">
-            <Sidebar>
+            <SidebarContainer>
               <Editorial post={posts[0]} />
-            </Sidebar>
+              <SocialMediaFollow />
+            </SidebarContainer>
           </div>
         </div>
       </div>

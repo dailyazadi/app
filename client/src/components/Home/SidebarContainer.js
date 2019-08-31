@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class Sidebar extends Component {
+class SidebarContainer extends Component {
   render() {
     return <div>{this.props.children}</div>;
   }
 }
 
-export default Sidebar;
+export default SidebarContainer;
