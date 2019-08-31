@@ -10,7 +10,7 @@ class Story extends Component {
 
     return (
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-sm-12 col-md-4">
           <h4>{title.rendered}</h4>
           <p>{excerpt.rendered}</p>
           <p className="text-warning small">وقتِ اشاعت: {date}</p>

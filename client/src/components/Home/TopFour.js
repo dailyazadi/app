@@ -6,11 +6,15 @@ class TopFour extends Component {
     const { post } = this.props;
     return (
       <div className="">
-        <div className="dropdown-divider border-dark pb-3 mt-0 pt-0"></div>
         <div className="row pb-3">
           {[1, 2, 3, 4].map((story, index) => {
             return (
-              <div className="col-md-3 border-left" key={index}>
+              <div
+                className={`col-6 col-sm-6 col-md-3 col-lg-3 ${
+                  index === 3 ? '' : 'border-left'
+                }`}
+                key={index}
+              >
                 {post && <SmallStory post={post} />}
               </div>
             );

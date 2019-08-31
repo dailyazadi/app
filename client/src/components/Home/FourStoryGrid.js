@@ -7,9 +7,9 @@ class FourStoryGrid extends Component {
       <div className="row">
         {posts.map((post, index) => {
           return (
-            <div className="col-md-3" key={index}>
+            <div className="col-12 col-sm-6 col-md-3" key={index}>
               <div className="p-4">
-                <img className="img-fluid" src={post.images.medium} />
+                <img className="img-fluid pb-4" src={post.images.medium} />
                 <h6>{post.title.rendered}</h6>
               </div>
             </div>

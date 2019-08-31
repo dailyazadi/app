@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class HeadlinesList extends Component {
   render() {
     return (
-      <ul className="list-group">
+      <ul className="list-group d-none d-md-block">
         <li className="list-group-item border-0 p-0 m-0">
           <a className="h4 btn p-0 m-0 pb-1" href="#">
             Cras justo odio
