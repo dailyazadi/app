@@ -7,7 +7,7 @@
 
 body {
   direction: rtl;
-  font-family: 'Jameel Noori Nastaleeq';
+  font-family: 'Jameel Noori Nastaleeq', sans-serif;
   text-align: right;
   background: #f7f7f7;
 }
@@ -23,4 +23,13 @@ body {
 }
 .flex-flow-nwrp {
   flex-flow: row nowrap;
+}
+.post-link {
+  color: #000;
+}
+.post-link:hover {
+  color: #a19d9d;
+}
+a:hover {
+  text-decoration: none;
 }

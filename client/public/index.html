@@ -21,14 +21,35 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Daily Azadi Quetta</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker
+            .register('worker.js')
+            .then(
+              function(registration) {
+                console.log(
+                  'Worker registration successful',
+                  registration.scope
+                );
+              },
+              function(err) {
+                console.log('Worker registration failed', err);
+              }
+            )
+            .catch(function(err) {
+              console.log(err);
+            });
+        });
+      } else {
+        console.log('Service Worker is not supported by browser.');
+      }
+    </script> -->
   </body>
 </html>

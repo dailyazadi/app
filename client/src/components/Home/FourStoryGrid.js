@@ -10,7 +10,7 @@ class FourStoryGrid extends Component {
             <div className="col-12 col-sm-6 col-md-3" key={index}>
               <div className="p-4">
                 <img className="img-fluid pb-4" src={post.images.medium} />
-                <Link to={`post/${id}`}>
+                <Link className="post-link" to={`post/${id}`}>
                   <h6>{post.title.rendered}</h6>
                 </Link>
               </div>

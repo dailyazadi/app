@@ -8,18 +8,19 @@ class Col2Story extends Component {
     const date = new Date(modified).toLocaleTimeString();
 
     return (
-      <div className="row">
-        <div className="col-md-6">
-          <Link to={`post/${id}`}>
+      <Link className="post-link" to={`post/${id}`}>
+        <div className="row">
+          <div className="col-md-6">
             <h5>{title.rendered}</h5>
-          </Link>
-          <p>{excerpt.rendered}</p>
-          <p className="text-warning small">وقتِ اشاعت: {date}</p>
+
+            <p>{excerpt.rendered}</p>
+            <p className="text-warning small">وقتِ اشاعت: {date}</p>
+          </div>
+          <div className="col-md-6 border-right-1">
+            <img className="img-fluid" src={images.full} />
+          </div>
         </div>
-        <div className="col-md-6 border-right-1">
-          <img className="img-fluid" src={images.full} />
-        </div>
-      </div>
+      </Link>
     );
   }
 }

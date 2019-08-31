@@ -18,7 +18,7 @@ class StoryWithAvatar extends Component {
                 />
               </div>
             </div>
-            <Link className="" to={`post/${id}`}>
+            <Link className="post-link" to={`post/${id}`}>
               <h6>{post.title.rendered}</h6>
             </Link>
             <p>{post.excerpt.rendered}</p>

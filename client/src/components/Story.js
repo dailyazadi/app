@@ -10,18 +10,19 @@ class Story extends Component {
     console.log(date);
 
     return (
-      <div className="row">
-        <div className="col-sm-12 col-md-4">
-          <Link to={`post/${id}`}>
+      <Link className="post-link" to={`post/${id}`}>
+        <div className="row">
+          <div className="col-sm-12 col-md-4">
             <h4>{title.rendered}</h4>
-          </Link>
-          <p>{excerpt.rendered}</p>
-          <p className="text-warning small">وقتِ اشاعت: {date}</p>
+
+            <p>{excerpt.rendered}</p>
+            <p className="text-warning small">وقتِ اشاعت: {date}</p>
+          </div>
+          <div className="col-md-7 border-right-1">
+            <img className="img-fluid" src={images.full} />
+          </div>
         </div>
-        <div className="col-md-7 border-right-1">
-          <img className="img-fluid" src={images.full} />
-        </div>
-      </div>
+      </Link>
     );
   }
 }
