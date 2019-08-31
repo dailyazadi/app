@@ -1,4 +1,23 @@
+@font-face {
+  font-family: 'Jameel Noori Nastaleeq';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/jameel-noori-nastaleeq.ttf');
+}
+
 body {
   direction: rtl;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Jameel Noori Nastaleeq';
+  text-align: right;
+  background: #f7f7f7;
+}
+
+.bg-white {
+  background: white;
+}
+.border-left-1 {
+  border-left: 1px solid rgb(237, 237, 237);
+}
+.border-right-1 {
+  border-right: 1px solid rgb(237, 237, 237);
 }

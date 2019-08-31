@@ -2,13 +2,15 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import Header from './components/Header';
-import { MENUS_URL } from './constants';
+import { MENUS_URL, API_URL } from './constants';
+import HomeView from './components/Home/HomeView';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menus: []
+      menus: [],
+      posts: []
     };
   }
 
@@ -27,13 +29,21 @@ class App extends React.Component {
       });
       this.setState({ menus });
     });
+
+    axios.get(API_URL).then(res => {
+      const { data } = res;
+      this.setState({
+        posts: data
+      });
+    });
   }
 
   render() {
-    const { menus } = this.state;
+    const { menus, posts } = this.state;
     return (
-      <div className="App">
+      <div className="pl-4 pr-4 bg-white">
         <Header menus={menus} />
+        <HomeView posts={posts} />
       </div>
     );
   }
