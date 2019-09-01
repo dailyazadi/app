@@ -1,0 +1,15 @@
+{
+  "short_name": "Daily Azadi",
+  "name": "Daily Azadi Quetta",
+  "icons": [
+    {
+      "src": "/images/icons-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
