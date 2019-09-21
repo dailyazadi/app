@@ -10,10 +10,12 @@ refrences:
 
 jobs:
   build:
+    working_directory: ~/app/client
     docker:
       - image: circleci/node:12
     steps:
       - checkout
+        path: ~/app
       - restore_cache:
           <<: *cache-options
       - run:
