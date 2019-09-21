@@ -1,30 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import axios from 'axios';
-import * as moment from 'moment';
-import 'moment/locale/ur';
-import './App.css';
-import Header from './components/Header';
-import { MENUS_URL, API_URL, MENUS, POSTS } from './constants';
-import HomeView from './components/Home/HomeView';
-import Footer from './components/Footer';
-import { ROUTES } from './constants';
-import Epaper from './components/Epaper';
-import Multimedia from './components/Multimedia';
-import SingleStory from './components/Home/SingleStory';
+/* eslint-disable no-unused-vars */
+import React from 'react'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import axios from 'axios'
+import * as moment from 'moment'
+import 'moment/locale/ur'
+import './App.css'
+import Header from './components/Header'
+import { MENUS_URL, API_URL, MENUS, POSTS } from './constants'
+import HomeView from './components/Home/HomeView'
+import Footer from './components/Footer'
+import { ROUTES } from './constants'
+import Epaper from './components/Epaper'
+import Multimedia from './components/Multimedia'
+import SingleStory from './components/Home/SingleStory'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       menus: MENUS,
       posts: POSTS,
       currentDate: moment().format('LL')
-    };
+    }
   }
 
-  componentDidMount() {
-    //#region axios get
+  componentDidMount () {
+    // #region axios get
     // axios.get(MENUS_URL).then(res => {
     //   const { data } = res;
     //   const { items } = data;
@@ -44,18 +45,18 @@ class App extends React.Component {
     //     posts: data
     //   });
     // });
-    //#endregion
+    // #endregion
   }
 
-  render() {
-    const { menus, posts, currentDate } = this.state;
-    console.log(currentDate);
+  render () {
+    const { menus, posts, currentDate } = this.state
+    console.log(currentDate)
     return (
       <div>
         <Header menus={menus} currentDate={currentDate} />
         <Router>
-          <div className="bg-white">
-            <div className="pl-4 pr-4">
+          <div className='bg-white'>
+            <div className='pl-4 pr-4'>
               <Route
                 path={ROUTES.home}
                 exact
@@ -69,8 +70,8 @@ class App extends React.Component {
           </div>
         </Router>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
