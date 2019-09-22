@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.281fba37.chunk.css",
+    "main.js": "/static/js/main.0acc2949.chunk.js",
+    "main.js.map": "/static/js/main.0acc2949.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a7ca617d.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a7ca617d.js.map",
+    "static/js/2.c6939eaf.chunk.js": "/static/js/2.c6939eaf.chunk.js",
+    "static/js/2.c6939eaf.chunk.js.map": "/static/js/2.c6939eaf.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.34f486fea1e5282a0877ef8cbce020c4.js": "/precache-manifest.34f486fea1e5282a0877ef8cbce020c4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.281fba37.chunk.css.map": "/static/css/main.281fba37.chunk.css.map",
+    "static/media/App.css": "/static/media/jameel-noori-nastaleeq.4b37da11.ttf",
+    "static/media/logo.svg": "/static/media/logo.b6419685.svg"
+  }
+}
