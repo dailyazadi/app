@@ -17,9 +17,6 @@ jobs:
       - restore_cache:
           <<: *cache-options
       - run:
-        name: unset-CI
-        command: unset CI
-      - run:
           name: npm-install
           command: npm install
       - run:
