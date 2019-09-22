@@ -54,7 +54,7 @@ class App extends React.Component {
     return (
       <div>
         <Header menus={menus} currentDate={currentDate} />
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <div className='bg-white'>
             <div className='pl-4 pr-4'>
               <Route
