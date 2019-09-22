@@ -15,10 +15,10 @@ rm -rf ./build
 timeout 60 npm run build
 # ./node_modules/.bin/next export
 
-touch ./out/.nojekyll
-cp .gitignore ./out/.gitignore
-cp CNAME ./out/CNAME
-mkdir ./out/.circleci && cp .circleci/config.yml ./out/.circleci/config.yml
+touch ./build/.nojekyll
+cp .gitignore ./build/.gitignore
+cp CNAME ./build/CNAME
+mkdir ./build/.circleci && cp .circleci/config.yml ./build/.circleci/config.yml
 
 # make a directory to put the gh-pages branch
 mkdir gh-pages-branch
@@ -36,7 +36,7 @@ else
 fi
 
 # copy over the built site
-cp -a ../out/. .
+cp -a ../build/. .
 
 git add -A
 git -c user.name="$GIT_USER_NAME" -c user.email="$GIT_USER_EMAIL" commit --allow-empty -m "deploy static site @ $(date)"
