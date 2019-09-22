@@ -17,9 +17,6 @@ jobs:
       - restore_cache:
           <<: *cache-options
       - run:
-        name: unset-CI
-        command: unset CI
-      - run:
           name: npm-install
           command: npm install
       - run:
@@ -35,7 +32,7 @@ jobs:
     steps:
       - add_ssh_keys:
           fingerprints:
-            - "4b:cd:36:9a:25:09:eb:62:71:a1:57:27:8e:8e:83:79"
+            - "66:43:b6:89:39:c7:9e:61:bf:39:cb:22:46:0b:88:a5"
       - checkout
       - restore_cache:
           <<: *cache-options
